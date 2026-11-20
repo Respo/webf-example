@@ -2,13 +2,20 @@
 Respo Calcit on WebF
 ----
 
-Based on [WebF](https://github.com/openwebf/cli):
+Based on [WebF](https://github.com/openwebf/cli). Build the web assets with:
 
 ```bash
-npm install -g @openwebf/cli
-cr --emit-js -1
-yarn bundle && yarn ui
+caps --strict --ci
+yarn install --immutable
+caps verify --toolchain
+yarn build
 ```
+
+The WebF host integration has not been revalidated in this migration.
+
+### Calcit 0.44.0
+
+构建需要配对的 Calcit 和 `@calcit/procs` 0.44.0。PR 只检查和构建，服务器部署仅在主分支推送时执行。
 
 ### Workflow
 
